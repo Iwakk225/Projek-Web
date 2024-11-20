@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Room - Hawaii Hotel</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Kamar - Hawaii Hotel</h1>
+        <form id="booking-form">
+            <div class="form-group">
+                <label for="checkin-date">Tanggal Check-in</label>
+                <input type="date" id="checkin-date" name="checkin_date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="checkout-date">Tanggal Check-out</label>
+                <input type="date" id="checkout-date" name="checkout_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Jumlah Orang</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="room-type">Tipe Kamar</label>
+                <select id="room-type" name="room_type" required>
+                    <option value="single">Regular</option>
+                    <option value="double">Premium</option>
+                    <option value="suite">VIP</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nights">Jumlah Hari Menginap</label>
+                <input type="number" id="nights" name="nights" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit-button">Pesan Kamar</button>
+            </div>
+
+            <div id="booking-summary" class="hidden">
+                <h3>Ringkasan Pemesanan</h3>
+                <p><strong>Tanggal Check-in:</strong> <span id="summary-checkin"></span></p>
+                <p><strong>Tanggal Check-out:</strong> <span id="summary-checkout"></span></p>
+                <p><strong>Jumlah Orang:</strong> <span id="summary-guests"></span></p>
+                <p><strong>Tipe Kamar:</strong> <span id="summary-room"></span></p>
+                <p><strong>Jumlah Hari Menginap:</strong> <span id="summary-nights"></span></p>
+                <p><strong>Total Biaya:</strong> <span id="summary-total"></span></p>
+                <button id="confirm-booking">Konfirmasi Pemesanan</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>
